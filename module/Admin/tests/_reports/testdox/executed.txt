@@ -1,0 +1,8 @@
+Admin\Service\Auth
+ [x] Authenticate without params
+ [x] Authenticate empty params
+ [x] Authenticate invalid parameters
+ [x] Authenticate invalid passord
+ [x] Authenticate valid params
+ [x] Logout
+

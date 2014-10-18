@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="Application Test Suite" tests="6" assertions="24" failures="0" errors="0" time="0.624202">
+    <testsuite name="IndexControllerTest" file="/home/jorginho/Desenv/exemploEbookZf2NaPratica/module/Application/tests/src/Application/Controller/IndexControllerTest.php" tests="6" assertions="24" failures="0" errors="0" time="0.624202">
+      <testcase name="test404" class="IndexControllerTest" file="/home/jorginho/Desenv/exemploEbookZf2NaPratica/module/Application/tests/src/Application/Controller/IndexControllerTest.php" line="32" assertions="1" time="0.093829"/>
+      <testcase name="testIndexAction" class="IndexControllerTest" file="/home/jorginho/Desenv/exemploEbookZf2NaPratica/module/Application/tests/src/Application/Controller/IndexControllerTest.php" line="43" assertions="5" time="0.088818"/>
+      <testcase name="testIndexActionPaginator" class="IndexControllerTest" file="/home/jorginho/Desenv/exemploEbookZf2NaPratica/module/Application/tests/src/Application/Controller/IndexControllerTest.php" line="74" assertions="8" time="0.249918"/>
+      <testcase name="testWithOutIdPostAction" class="IndexControllerTest" file="/home/jorginho/Desenv/exemploEbookZf2NaPratica/module/Application/tests/src/Application/Controller/IndexControllerTest.php" line="120" assertions="2" time="0.045030"/>
+      <testcase name="testInvalidIdPostAction" class="IndexControllerTest" file="/home/jorginho/Desenv/exemploEbookZf2NaPratica/module/Application/tests/src/Application/Controller/IndexControllerTest.php" line="132" assertions="2" time="0.048551"/>
+      <testcase name="testPostAction" class="IndexControllerTest" file="/home/jorginho/Desenv/exemploEbookZf2NaPratica/module/Application/tests/src/Application/Controller/IndexControllerTest.php" line="143" assertions="6" time="0.098056"/>
+    </testsuite>
+  </testsuite>
+</testsuites>

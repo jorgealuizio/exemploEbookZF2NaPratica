@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="Skel Test Suite" tests="6" assertions="14" failures="0" errors="0" time="0.514684">
+    <testsuite name="Admin\Service\AuthTest" file="/home/jorginho/Desenv/exemploEbookZf2NaPratica/module/Admin/tests/src/Admin/Service/AuthTest.php" namespace="Admin\Service" fullPackage="Admin.Service" tests="6" assertions="14" failures="0" errors="0" time="0.514684">
+      <testcase name="testAuthenticateWithoutParams" class="Admin\Service\AuthTest" file="/home/jorginho/Desenv/exemploEbookZf2NaPratica/module/Admin/tests/src/Admin/Service/AuthTest.php" line="28" assertions="1" time="0.093096"/>
+      <testcase name="testAuthenticateEmptyParams" class="Admin\Service\AuthTest" file="/home/jorginho/Desenv/exemploEbookZf2NaPratica/module/Admin/tests/src/Admin/Service/AuthTest.php" line="41" assertions="2" time="0.063376"/>
+      <testcase name="testAuthenticateInvalidParameters" class="Admin\Service\AuthTest" file="/home/jorginho/Desenv/exemploEbookZf2NaPratica/module/Admin/tests/src/Admin/Service/AuthTest.php" line="54" assertions="2" time="0.077906"/>
+      <testcase name="testAuthenticateInvalidPassord" class="Admin\Service\AuthTest" file="/home/jorginho/Desenv/exemploEbookZf2NaPratica/module/Admin/tests/src/Admin/Service/AuthTest.php" line="67" assertions="2" time="0.092492"/>
+      <testcase name="testAuthenticateValidParams" class="Admin\Service\AuthTest" file="/home/jorginho/Desenv/exemploEbookZf2NaPratica/module/Admin/tests/src/Admin/Service/AuthTest.php" line="79" assertions="3" time="0.084877"/>
+      <testcase name="testLogout" class="Admin\Service\AuthTest" file="/home/jorginho/Desenv/exemploEbookZf2NaPratica/module/Admin/tests/src/Admin/Service/AuthTest.php" line="115" assertions="4" time="0.102937"/>
+    </testsuite>
+  </testsuite>
+</testsuites>
