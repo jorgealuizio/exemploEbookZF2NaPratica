@@ -27,6 +27,8 @@ class IndexController extends ActionController
 
         $paginatorAdapter = new PaginatorDbSelectAdapter($select, $sql);
         $paginator = new Paginator($paginatorAdapter);
+        $cache = $this->getServiceLocator()->get('Cache');
+        $paginator->setCache($cache);
         $paginator->setCurrentPageNumber($this->params()->fromRoute('page'));
 
         return new ViewModel(array(
@@ -51,5 +53,24 @@ class IndexController extends ActionController
         return new ViewModel(array(
             'post' => $post
         ));
+    }
+
+    /**
+     * Retorna os comentários de um post
+     * @return Zend\Http\Response
+     */
+    public function commentsAction()
+    {
+        $id = (int) $this->params()->fromRoute('id', 0);
+        $where = array('post_id' => $id);
+        $comments = $this->getTable('Application\Model\Comment')
+            ->fetchAll(null, $where)
+            ->toArray();
+        $result = new ViewModel(array(
+                'comments' => $comments
+            )
+        );
+        $result->setTerminal(true);
+        return $result;
     }
 }

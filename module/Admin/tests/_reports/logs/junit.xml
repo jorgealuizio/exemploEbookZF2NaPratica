@@ -1,13 +1,95 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="Skel Test Suite" tests="6" assertions="14" failures="0" errors="0" time="0.514684">
-    <testsuite name="Admin\Service\AuthTest" file="/home/jorginho/Desenv/exemploEbookZf2NaPratica/module/Admin/tests/src/Admin/Service/AuthTest.php" namespace="Admin\Service" fullPackage="Admin.Service" tests="6" assertions="14" failures="0" errors="0" time="0.514684">
-      <testcase name="testAuthenticateWithoutParams" class="Admin\Service\AuthTest" file="/home/jorginho/Desenv/exemploEbookZf2NaPratica/module/Admin/tests/src/Admin/Service/AuthTest.php" line="28" assertions="1" time="0.093096"/>
-      <testcase name="testAuthenticateEmptyParams" class="Admin\Service\AuthTest" file="/home/jorginho/Desenv/exemploEbookZf2NaPratica/module/Admin/tests/src/Admin/Service/AuthTest.php" line="41" assertions="2" time="0.063376"/>
-      <testcase name="testAuthenticateInvalidParameters" class="Admin\Service\AuthTest" file="/home/jorginho/Desenv/exemploEbookZf2NaPratica/module/Admin/tests/src/Admin/Service/AuthTest.php" line="54" assertions="2" time="0.077906"/>
-      <testcase name="testAuthenticateInvalidPassord" class="Admin\Service\AuthTest" file="/home/jorginho/Desenv/exemploEbookZf2NaPratica/module/Admin/tests/src/Admin/Service/AuthTest.php" line="67" assertions="2" time="0.092492"/>
-      <testcase name="testAuthenticateValidParams" class="Admin\Service\AuthTest" file="/home/jorginho/Desenv/exemploEbookZf2NaPratica/module/Admin/tests/src/Admin/Service/AuthTest.php" line="79" assertions="3" time="0.084877"/>
-      <testcase name="testLogout" class="Admin\Service\AuthTest" file="/home/jorginho/Desenv/exemploEbookZf2NaPratica/module/Admin/tests/src/Admin/Service/AuthTest.php" line="115" assertions="4" time="0.102937"/>
+  <testsuite name="Skel Test Suite" tests="27" assertions="54" failures="0" errors="5" time="2.166379">
+    <testsuite name="AuthControllerTest" file="/home/jorginho/Desenv/exemploEbookZf2NaPratica/module/Admin/tests/src/Admin/Controller/AuthControllerTest.php" tests="5" assertions="15" failures="0" errors="0" time="0.468319">
+      <testcase name="test404" class="AuthControllerTest" file="/home/jorginho/Desenv/exemploEbookZf2NaPratica/module/Admin/tests/src/Admin/Controller/AuthControllerTest.php" line="29" assertions="1" time="0.105496"/>
+      <testcase name="testIndexActionLoginForm" class="AuthControllerTest" file="/home/jorginho/Desenv/exemploEbookZf2NaPratica/module/Admin/tests/src/Admin/Controller/AuthControllerTest.php" line="37" assertions="8" time="0.075103"/>
+      <testcase name="testLoginInvalidMethod" class="AuthControllerTest" file="/home/jorginho/Desenv/exemploEbookZf2NaPratica/module/Admin/tests/src/Admin/Controller/AuthControllerTest.php" line="72" assertions="2" time="0.092799"/>
+      <testcase name="testLogin" class="AuthControllerTest" file="/home/jorginho/Desenv/exemploEbookZf2NaPratica/module/Admin/tests/src/Admin/Controller/AuthControllerTest.php" line="81" assertions="2" time="0.098621"/>
+      <testcase name="testLogout" class="AuthControllerTest" file="/home/jorginho/Desenv/exemploEbookZf2NaPratica/module/Admin/tests/src/Admin/Controller/AuthControllerTest.php" line="101" assertions="2" time="0.096300"/>
+    </testsuite>
+    <testsuite name="IndexControllerTest" file="/home/jorginho/Desenv/exemploEbookZf2NaPratica/module/Admin/tests/src/Admin/Controller/IndexControllerTest.php" tests="7" assertions="5" failures="0" errors="4" time="0.549942">
+      <testcase name="test404" class="IndexControllerTest" file="/home/jorginho/Desenv/exemploEbookZf2NaPratica/module/Admin/tests/src/Admin/Controller/IndexControllerTest.php" line="31" assertions="1" time="0.071428"/>
+      <testcase name="testSaveActionNewRequest" class="IndexControllerTest" file="/home/jorginho/Desenv/exemploEbookZf2NaPratica/module/Admin/tests/src/Admin/Controller/IndexControllerTest.php" line="43" assertions="0" time="0.080696">
+        <error type="PHPUnit_Framework_Error">IndexControllerTest::testSaveActionNewRequest
+Argument 1 passed to Zend\Validator\AbstractValidator::setDefaultTranslator() must be an instance of Zend\Validator\Translator\TranslatorInterface, instance of Zend\I18n\Translator\Translator given, called in /home/jorginho/Desenv/exemploEbookZf2NaPratica/module/Admin/src/Admin/Controller/IndexController.php on line 27 and defined
+
+/home/jorginho/Desenv/exemploEbookZf2NaPratica/vendor/zendframework/zendframework/library/Zend/Validator/AbstractValidator.php:471
+/home/jorginho/Desenv/exemploEbookZf2NaPratica/module/Admin/src/Admin/Controller/IndexController.php:27
+/home/jorginho/Desenv/exemploEbookZf2NaPratica/vendor/zendframework/zendframework/library/Zend/Mvc/Controller/AbstractActionController.php:83
+/home/jorginho/Desenv/exemploEbookZf2NaPratica/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468
+/home/jorginho/Desenv/exemploEbookZf2NaPratica/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:207
+/home/jorginho/Desenv/exemploEbookZf2NaPratica/vendor/zendframework/zendframework/library/Zend/Mvc/Controller/AbstractController.php:117
+/home/jorginho/Desenv/exemploEbookZf2NaPratica/module/Admin/tests/src/Admin/Controller/IndexControllerTest.php:48
+</error>
+      </testcase>
+      <testcase name="testSaveActionUpdateFormRequest" class="IndexControllerTest" file="/home/jorginho/Desenv/exemploEbookZf2NaPratica/module/Admin/tests/src/Admin/Controller/IndexControllerTest.php" line="69" assertions="0" time="0.076571">
+        <error type="PHPUnit_Framework_Error">IndexControllerTest::testSaveActionUpdateFormRequest
+Argument 1 passed to Zend\Validator\AbstractValidator::setDefaultTranslator() must be an instance of Zend\Validator\Translator\TranslatorInterface, instance of Zend\I18n\Translator\Translator given, called in /home/jorginho/Desenv/exemploEbookZf2NaPratica/module/Admin/src/Admin/Controller/IndexController.php on line 27 and defined
+
+/home/jorginho/Desenv/exemploEbookZf2NaPratica/vendor/zendframework/zendframework/library/Zend/Validator/AbstractValidator.php:471
+/home/jorginho/Desenv/exemploEbookZf2NaPratica/module/Admin/src/Admin/Controller/IndexController.php:27
+/home/jorginho/Desenv/exemploEbookZf2NaPratica/vendor/zendframework/zendframework/library/Zend/Mvc/Controller/AbstractActionController.php:83
+/home/jorginho/Desenv/exemploEbookZf2NaPratica/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468
+/home/jorginho/Desenv/exemploEbookZf2NaPratica/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:207
+/home/jorginho/Desenv/exemploEbookZf2NaPratica/vendor/zendframework/zendframework/library/Zend/Mvc/Controller/AbstractController.php:117
+/home/jorginho/Desenv/exemploEbookZf2NaPratica/module/Admin/tests/src/Admin/Controller/IndexControllerTest.php:76
+</error>
+      </testcase>
+      <testcase name="testSaveActionPostRequest" class="IndexControllerTest" file="/home/jorginho/Desenv/exemploEbookZf2NaPratica/module/Admin/tests/src/Admin/Controller/IndexControllerTest.php" line="103" assertions="0" time="0.071323">
+        <error type="PHPUnit_Framework_Error">IndexControllerTest::testSaveActionPostRequest
+Argument 1 passed to Zend\Validator\AbstractValidator::setDefaultTranslator() must be an instance of Zend\Validator\Translator\TranslatorInterface, instance of Zend\I18n\Translator\Translator given, called in /home/jorginho/Desenv/exemploEbookZf2NaPratica/module/Admin/src/Admin/Controller/IndexController.php on line 27 and defined
+
+/home/jorginho/Desenv/exemploEbookZf2NaPratica/vendor/zendframework/zendframework/library/Zend/Validator/AbstractValidator.php:471
+/home/jorginho/Desenv/exemploEbookZf2NaPratica/module/Admin/src/Admin/Controller/IndexController.php:27
+/home/jorginho/Desenv/exemploEbookZf2NaPratica/vendor/zendframework/zendframework/library/Zend/Mvc/Controller/AbstractActionController.php:83
+/home/jorginho/Desenv/exemploEbookZf2NaPratica/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468
+/home/jorginho/Desenv/exemploEbookZf2NaPratica/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:207
+/home/jorginho/Desenv/exemploEbookZf2NaPratica/vendor/zendframework/zendframework/library/Zend/Mvc/Controller/AbstractController.php:117
+/home/jorginho/Desenv/exemploEbookZf2NaPratica/module/Admin/tests/src/Admin/Controller/IndexControllerTest.php:114
+</error>
+      </testcase>
+      <testcase name="testSaveActionInvalidPostRequest" class="IndexControllerTest" file="/home/jorginho/Desenv/exemploEbookZf2NaPratica/module/Admin/tests/src/Admin/Controller/IndexControllerTest.php" line="131" assertions="0" time="0.072555">
+        <error type="PHPUnit_Framework_Error">IndexControllerTest::testSaveActionInvalidPostRequest
+Argument 1 passed to Zend\Validator\AbstractValidator::setDefaultTranslator() must be an instance of Zend\Validator\Translator\TranslatorInterface, instance of Zend\I18n\Translator\Translator given, called in /home/jorginho/Desenv/exemploEbookZf2NaPratica/module/Admin/src/Admin/Controller/IndexController.php on line 27 and defined
+
+/home/jorginho/Desenv/exemploEbookZf2NaPratica/vendor/zendframework/zendframework/library/Zend/Validator/AbstractValidator.php:471
+/home/jorginho/Desenv/exemploEbookZf2NaPratica/module/Admin/src/Admin/Controller/IndexController.php:27
+/home/jorginho/Desenv/exemploEbookZf2NaPratica/vendor/zendframework/zendframework/library/Zend/Mvc/Controller/AbstractActionController.php:83
+/home/jorginho/Desenv/exemploEbookZf2NaPratica/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:468
+/home/jorginho/Desenv/exemploEbookZf2NaPratica/vendor/zendframework/zendframework/library/Zend/EventManager/EventManager.php:207
+/home/jorginho/Desenv/exemploEbookZf2NaPratica/vendor/zendframework/zendframework/library/Zend/Mvc/Controller/AbstractController.php:117
+/home/jorginho/Desenv/exemploEbookZf2NaPratica/module/Admin/tests/src/Admin/Controller/IndexControllerTest.php:139
+</error>
+      </testcase>
+      <testcase name="testInvalidDeleteAction" class="IndexControllerTest" file="/home/jorginho/Desenv/exemploEbookZf2NaPratica/module/Admin/tests/src/Admin/Controller/IndexControllerTest.php" line="162" assertions="2" time="0.091077"/>
+      <testcase name="testDeleteAction" class="IndexControllerTest" file="/home/jorginho/Desenv/exemploEbookZf2NaPratica/module/Admin/tests/src/Admin/Controller/IndexControllerTest.php" line="177" assertions="2" time="0.086292"/>
+    </testsuite>
+    <testsuite name="Admin\Model\UserTest" file="/home/jorginho/Desenv/exemploEbookZf2NaPratica/module/Admin/tests/src/Admin/Model/UserTest.php" namespace="Admin\Model" fullPackage="Admin.Model" tests="8" assertions="20" failures="0" errors="0" time="0.611881">
+      <testcase name="testGetInputFilter" class="Admin\Model\UserTest" file="/home/jorginho/Desenv/exemploEbookZf2NaPratica/module/Admin/tests/src/Admin/Model/UserTest.php" line="13" assertions="1" time="0.062175"/>
+      <testcase name="testInputFilterValid" class="Admin\Model\UserTest" file="/home/jorginho/Desenv/exemploEbookZf2NaPratica/module/Admin/tests/src/Admin/Model/UserTest.php" line="25" assertions="7" time="0.075120"/>
+      <testcase name="testInputFilterInvalidoUsername" class="Admin\Model\UserTest" file="/home/jorginho/Desenv/exemploEbookZf2NaPratica/module/Admin/tests/src/Admin/Model/UserTest.php" line="41" assertions="1" time="0.069807"/>
+      <testcase name="testInputFilterInvalidoRole" class="Admin\Model\UserTest" file="/home/jorginho/Desenv/exemploEbookZf2NaPratica/module/Admin/tests/src/Admin/Model/UserTest.php" line="54" assertions="1" time="0.063910"/>
+      <testcase name="testInsert" class="Admin\Model\UserTest" file="/home/jorginho/Desenv/exemploEbookZf2NaPratica/module/Admin/tests/src/Admin/Model/UserTest.php" line="67" assertions="2" time="0.088237"/>
+      <testcase name="testInsertInvalido" class="Admin\Model\UserTest" file="/home/jorginho/Desenv/exemploEbookZf2NaPratica/module/Admin/tests/src/Admin/Model/UserTest.php" line="81" assertions="2" time="0.074622"/>
+      <testcase name="testUpdate" class="Admin\Model\UserTest" file="/home/jorginho/Desenv/exemploEbookZf2NaPratica/module/Admin/tests/src/Admin/Model/UserTest.php" line="90" assertions="3" time="0.092910"/>
+      <testcase name="testDelete" class="Admin\Model\UserTest" file="/home/jorginho/Desenv/exemploEbookZf2NaPratica/module/Admin/tests/src/Admin/Model/UserTest.php" line="113" assertions="3" time="0.085100"/>
+    </testsuite>
+    <testsuite name="Admin\Service\AuthTest" file="/home/jorginho/Desenv/exemploEbookZf2NaPratica/module/Admin/tests/src/Admin/Service/AuthTest.php" namespace="Admin\Service" fullPackage="Admin.Service" tests="7" assertions="14" failures="0" errors="1" time="0.536237">
+      <testcase name="testAuthenticateWithoutParams" class="Admin\Service\AuthTest" file="/home/jorginho/Desenv/exemploEbookZf2NaPratica/module/Admin/tests/src/Admin/Service/AuthTest.php" line="28" assertions="1" time="0.072241"/>
+      <testcase name="testAuthenticateEmptyParams" class="Admin\Service\AuthTest" file="/home/jorginho/Desenv/exemploEbookZf2NaPratica/module/Admin/tests/src/Admin/Service/AuthTest.php" line="41" assertions="2" time="0.075009"/>
+      <testcase name="testAuthenticateInvalidParameters" class="Admin\Service\AuthTest" file="/home/jorginho/Desenv/exemploEbookZf2NaPratica/module/Admin/tests/src/Admin/Service/AuthTest.php" line="54" assertions="2" time="0.069983"/>
+      <testcase name="testAuthenticateInvalidPassord" class="Admin\Service\AuthTest" file="/home/jorginho/Desenv/exemploEbookZf2NaPratica/module/Admin/tests/src/Admin/Service/AuthTest.php" line="67" assertions="2" time="0.079984"/>
+      <testcase name="testAuthenticateValidParams" class="Admin\Service\AuthTest" file="/home/jorginho/Desenv/exemploEbookZf2NaPratica/module/Admin/tests/src/Admin/Service/AuthTest.php" line="79" assertions="3" time="0.073430"/>
+      <testcase name="testLogout" class="Admin\Service\AuthTest" file="/home/jorginho/Desenv/exemploEbookZf2NaPratica/module/Admin/tests/src/Admin/Service/AuthTest.php" line="115" assertions="4" time="0.095338"/>
+      <testcase name="testAuthorize" class="Admin\Service\AuthTest" file="/home/jorginho/Desenv/exemploEbookZf2NaPratica/module/Admin/tests/src/Admin/Service/AuthTest.php" line="142" assertions="0" time="0.070252">
+        <error type="PHPUnit_Framework_Error_Warning">Admin\Service\AuthTest::testAuthorize
+Missing argument 1 for Admin\Service\Auth::authorize(), called in /home/jorginho/Desenv/exemploEbookZf2NaPratica/module/Admin/tests/src/Admin/Service/AuthTest.php on line 146 and defined
+
+/home/jorginho/Desenv/exemploEbookZf2NaPratica/module/Admin/src/Admin/Service/Auth.php:88
+/home/jorginho/Desenv/exemploEbookZf2NaPratica/module/Admin/tests/src/Admin/Service/AuthTest.php:146
+</error>
+      </testcase>
     </testsuite>
   </testsuite>
 </testsuites>

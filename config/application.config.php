@@ -15,4 +15,7 @@ return array(
             './vendor',
         ),
     ),
+    'cache' => array(
+        'adapter' => 'memory'
+    ),
 );
